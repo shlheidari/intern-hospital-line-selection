@@ -1,0 +1,538 @@
+/* Selection page. Needs schedule.css. */
+
+/* ---- board cells (from the spreadsheet export) ---- */
+table.sheet0 tr { height: 13.8pt; }
+table.sheet0 tr.row0 { height: 15.6pt; }
+
+td.style2 {
+  vertical-align:middle;
+  text-align:center;
+  border-bottom:1px solid #000000 !important;
+  border-top:1px solid #000000 !important;
+  border-left:1px solid #000000 !important;
+  border-right:1px solid #000000 !important;
+  color:#000000;
+  font-family:'Calibri';
+  font-size:10pt;
+  background-color:white;
+}
+
+td.style3 {
+  vertical-align:middle;
+  text-align:center;
+  border-bottom:1px solid #000000 !important;
+  border-top:1px solid #000000 !important;
+  border-left:1px solid #000000 !important;
+  border-right:1px solid #000000 !important;
+  font-weight:bold;
+  color:#000000;
+  font-family:'Calibri';
+  font-size:12pt;
+  background-color:white;
+}
+
+td.style4 {
+  vertical-align:middle;
+  text-align:center;
+  border-bottom:1px solid #000000 !important;
+  border-top:1px solid #000000 !important;
+  border-left:1px solid #000000 !important;
+  border-right:1px solid #000000 !important;
+  font-weight:bold;
+  color:#000000;
+  font-family:'Calibri';
+  font-size:10pt;
+  background-color:#45818E;
+}
+
+td.style5 {
+  vertical-align:middle;
+  text-align:center;
+  border-bottom:1px solid #000000 !important;
+  border-top:1px solid #000000 !important;
+  border-left:1px solid #000000 !important;
+  border-right:1px solid #000000 !important;
+  font-weight:bold;
+  color:#000000;
+  font-family:'Calibri';
+  font-size:10pt;
+  background-color:#B6D7A8;
+}
+
+td.style6 {
+  vertical-align:middle;
+  text-align:center;
+  border-bottom:1px solid #000000 !important;
+  border-top:1px solid #000000 !important;
+  border-left:1px solid #000000 !important;
+  border-right:1px solid #000000 !important;
+  font-weight:bold;
+  color:#000000;
+  font-family:'Calibri';
+  font-size:10pt;
+  background-color:#DD7E6B;
+}
+
+td.style7 {
+  vertical-align:middle;
+  text-align:center;
+  border-bottom:1px solid #000000 !important;
+  border-top:1px solid #000000 !important;
+  border-left:1px solid #000000 !important;
+  border-right:1px solid #000000 !important;
+  font-weight:bold;
+  color:#000000;
+  font-family:'Calibri';
+  font-size:10pt;
+  background-color:#F6B26B;
+}
+
+td.style8 {
+  vertical-align:middle;
+  text-align:center;
+  border-bottom:1px solid #000000 !important;
+  border-top:1px solid #000000 !important;
+  border-left:1px solid #000000 !important;
+  border-right:1px solid #000000 !important;
+  font-weight:bold;
+  color:#000000;
+  font-family:'Calibri';
+  font-size:12pt;
+  background-color:white;
+}
+
+td.style9 {
+  vertical-align:bottom;
+  border-bottom:1px solid #000000 !important;
+  border-top:1px solid #000000 !important;
+  border-left:1px solid #000000 !important;
+  border-right:1px solid #000000 !important;
+  color:#000000;
+  font-family:'Arial';
+  font-size:10pt;
+  background-color:white;
+}
+
+td.style10 {
+  vertical-align:middle;
+  text-align:center;
+  border-bottom:1px solid #000000 !important;
+  border-top:1px solid #000000 !important;
+  border-left:1px solid #000000 !important;
+  border-right:1px solid #000000 !important;
+  font-weight:bold;
+  color:#000000;
+  font-family:'Calibri';
+  font-size:10pt;
+  background-color:#B4A7D6;
+}
+
+td.style11 {
+  vertical-align:middle;
+  text-align:center;
+  border-bottom:1px solid #000000 !important;
+  border-top:1px solid #000000 !important;
+  border-left:1px solid #000000 !important;
+  border-right:1px solid #000000 !important;
+  font-weight:bold;
+  color:#000000;
+  font-family:'Calibri';
+  font-size:10pt;
+  background-color:#6FA8DC;
+}
+
+td.style12 {
+  vertical-align:middle;
+  text-align:center;
+  border-bottom:1px solid #000000 !important;
+  border-top:1px solid #000000 !important;
+  border-left:1px solid #000000 !important;
+  border-right:1px solid #000000 !important;
+  font-weight:bold;
+  color:#000000;
+  font-family:'Calibri';
+  font-size:10pt;
+  background-color:#EA9999;
+}
+
+td.style13 {
+  vertical-align:middle;
+  text-align:center;
+  border-bottom:1px solid #000000 !important;
+  border-top:1px solid #000000 !important;
+  border-left:1px solid #000000 !important;
+  border-right:1px solid #000000 !important;
+  font-weight:bold;
+  color:#000000;
+  font-family:'Calibri';
+  font-size:10pt;
+  background-color:#D5A6BD;
+}
+
+td.style14 {
+  vertical-align:middle;
+  text-align:center;
+  border-bottom:1px solid #000000 !important;
+  border-top:1px solid #000000 !important;
+  border-left:1px solid #000000 !important;
+  border-right:1px solid #000000 !important;
+  font-weight:bold;
+  color:#000000;
+  font-family:'Calibri';
+  font-size:10pt;
+  background-color:#CCECFF;
+}
+
+td.style15 {
+  vertical-align:middle;
+  text-align:center;
+  border-bottom:1px solid #000000 !important;
+  border-top:1px solid #000000 !important;
+  border-left:1px solid #000000 !important;
+  border-right:1px solid #000000 !important;
+  font-weight:bold;
+  color:#000000;
+  font-family:'Calibri';
+  font-size:10pt;
+  background-color:#B7B7B7;
+}
+
+td.style16 {
+  vertical-align:middle;
+  text-align:center;
+  border-bottom:1px solid #000000 !important;
+  border-top:1px solid #000000 !important;
+  border-left:1px solid #000000 !important;
+  border-right:1px solid #000000 !important;
+  font-weight:bold;
+  color:#000000;
+  font-family:'Calibri';
+  font-size:10pt;
+  background-color:#BF9000;
+}
+
+td.style17 {
+  vertical-align:middle;
+  text-align:center;
+  border-bottom:1px solid #000000 !important;
+  border-top:1px solid #000000 !important;
+  border-left:1px solid #000000 !important;
+  border-right:1px solid #000000 !important;
+  font-weight:bold;
+  color:#000000;
+  font-family:'Calibri';
+  font-size:10pt;
+  background-color:#93C47D;
+}
+
+td.style18 {
+  vertical-align:middle;
+  text-align:center;
+  border-bottom:1px solid #000000 !important;
+  border-top:1px solid #000000 !important;
+  border-left:1px solid #000000 !important;
+  border-right:1px solid #000000 !important;
+  font-weight:bold;
+  color:#000000;
+  font-family:'Calibri';
+  font-size:10pt;
+  background-color:#F9CB9C;
+}
+
+td.style19 {
+  vertical-align:middle;
+  text-align:center;
+  border-bottom:none #000000;
+  border-top:1px solid #000000 !important;
+  border-left:1px solid #000000 !important;
+  border-right:1px solid #000000 !important;
+  font-weight:bold;
+  color:#000000;
+  font-family:'Calibri';
+  font-size:10pt;
+  background-color:#BF9000;
+}
+
+td.style20 {
+  vertical-align:middle;
+  text-align:center;
+  border-bottom:1px solid #000000 !important;
+  border-top:none #000000;
+  border-left:1px solid #000000 !important;
+  border-right:1px solid #000000 !important;
+  font-weight:bold;
+  color:#000000;
+  font-family:'Calibri';
+  font-size:10pt;
+  background-color:#BF9000;
+}
+
+/* ---- page ---- */
+@page { margin: 0.75in 0.7in; }
+body { margin: 0.75in 0.7in; }
+body > .container { padding-top: 40px; }
+
+/* Hospital list that opens under a cell. These rules must come before the board
+   layout below: the list sits inside a board cell, and `table.sheet0 td` has to
+   win over `table.stylet td` for the rows (as it always did). */
+table.stylet {
+  display: none;
+  position: absolute;
+  z-index: 1000;
+  min-width: 300px;
+  width: auto;
+  margin: 10px auto;
+  background-color: #ffffff;
+  border-collapse: collapse;
+  border: 2px solid #45818E !important;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  direction: rtl;
+  font-family: 'B Nazanin', Tahoma, sans-serif;
+  font-size: 14px;
+}
+table.stylet.open { display: table; }
+table.stylet td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #eeeeee;
+  font-size: 14px;
+  color: #333333;
+  text-align: right;
+  cursor: pointer;
+}
+table.stylet tr:last-child td { border-bottom: none; }
+table.stylet tr:hover { background-color: #f8f9fa; }
+table.stylet td:first-child {
+  font-weight: bold;
+  color: #2c3e50;
+  background-color: #f4f6f7;
+}
+
+/* Board layout (overrides the export's fixed widths and borders). */
+table.sheet0 {
+  border-collapse: collapse;
+  width: 50% !important;
+  min-width: 300px;
+  table-layout: auto;
+  direction: ltr;
+  margin: 0 auto;
+}
+table.sheet0 col { width: auto !important; min-width: 120px; }
+table.sheet0 td,
+table.sheet0 th {
+  white-space: nowrap;
+  padding: 8px 12px;
+  font-size: 14px;
+  border: 1px solid #ddd !important;
+  text-align: center;
+}
+.dark-cell {
+  background-color: #d3d3d3 !important;
+  opacity: 0.7 !important;
+  cursor: not-allowed !important;
+  pointer-events: none;
+}
+
+/* Student card */
+.selection-card {
+  position: relative;
+  margin: 10px 0;
+  padding: 15px;
+  overflow: hidden;
+  border: 2px solid #45818E;
+  border-radius: 8px;
+  background-color: #f8f9fa;
+  transition: all 0.3s ease;
+}
+.selection-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background-color: #45818E;
+}
+.selection-card h3 {
+  margin-bottom: 15px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #45818E;
+  color: #2c3e50;
+  font-family: 'B Nazanin', Tahoma, sans-serif;
+  font-size: 18px;
+}
+.selection-card table { overflow: hidden; border-radius: 6px; background-color: white; }
+.selection-card table th { background-color: #e9f2f4 !important; color: #2c3e50 !important; }
+.selection-card table td { background-color: #ffffff !important; color: #4a4a4a !important; }
+.selection-card:hover {
+  border-color: #366f7a;
+  box-shadow: 0 4px 12px rgba(69, 129, 142, 0.15);
+  transform: translateY(-2px);
+}
+.selection-card:hover::before { background-color: #366f7a; }
+
+/* Line drop-down */
+#select_line {
+  width: 100%;
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 10px;
+  text-align: center;
+}
+#select_line select {
+  width: 100%;
+  padding: 12px 20px;
+  border: 2px solid #45818E;
+  border-radius: 8px;
+  background-color: #f8f9fa;
+  color: #2c3e50;
+  font-family: 'Arial', sans-serif;
+  font-size: 14px;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  transition: all 0.3s ease;
+}
+#select_line select::-ms-expand { display: none; }
+#select_line::after {
+  content: "▼";
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  color: #45818E;
+  font-size: 12px;
+  pointer-events: none;
+}
+#select_line select:hover { background-color: #ffffff; border-color: #2c3e50; }
+#select_line select:focus {
+  outline: none;
+  border-color: #45818E;
+  box-shadow: 0 0 0 3px rgba(69, 129, 142, 0.3);
+}
+#select_line select option { padding: 10px; background-color: white; color: #2c3e50; }
+#select_line select:disabled { background-color: #e9ecef; color: #6c757d; cursor: not-allowed; }
+
+/* Seats per line */
+#line_detail {
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
+  overflow: hidden;
+  border-collapse: collapse;
+  border-radius: 8px;
+  background: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+  font-family: 'Arial', sans-serif;
+}
+#line_detail thead { background-color: #45818E; color: white; }
+#line_detail thead th {
+  padding: 15px 20px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+#line_detail tbody td {
+  padding: 12px 20px;
+  border-bottom: 1px solid #ecf0f1;
+  color: #2c3e50;
+  text-align: center;
+  font-size: 14px;
+}
+#line_detail tbody tr:nth-child(even) { background-color: #f8f9fa; }
+#line_detail tbody tr:hover { background-color: #f1f4f7; transition: background-color 0.2s ease; }
+#line_detail tbody td:first-child { color: #45818E; font-weight: 500; }
+
+/* Final submit button */
+#button { width: 100%; margin: 25px auto; text-align: center; }
+.final-button {
+  display: inline-block;
+  width: 100px;
+  padding: 8px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  background-color: #45818E;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: white;
+  cursor: pointer;
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+.final-button:hover { transform: translateY(-1px); box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); }
+.final-button:active { transform: translateY(0); box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); }
+.final-button:focus { outline: none; box-shadow: 0 0 0 3px rgba(69, 129, 142, 0.3); }
+
+/* Waiting indicator */
+#loading-spinner {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 1000;
+  transform: translate(-50%, -50%);
+}
+#loading-spinner .glyphicon { font-size: 40px; color: #45818E; }
+@keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+.glyphicon-refresh { animation: spin 1s infinite linear; }
+
+/* Countdown */
+#timerr {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+  padding: 15px;
+  border: 2px solid #45818E;
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.base-timer { position: relative; width: 80px; height: 80px; }
+.base-timer__svg { transform: scaleX(-1); }
+.base-timer__circle { fill: none; stroke: none; }
+.base-timer__path-elapsed { stroke-width: 6px; stroke: #e0e0e0; }
+.base-timer__path-remaining {
+  stroke-width: 6px;
+  stroke-linecap: round;
+  stroke: currentColor;
+  fill-rule: nonzero;
+  transform: rotate(90deg);
+  transform-origin: center;
+  transition: 1s linear all;
+}
+.base-timer__path-remaining.green { color: #45818E; }
+.base-timer__path-remaining.orange { color: #F6B26B; }
+.base-timer__path-remaining.red { color: #DD7E6B; }
+.base-timer__label {
+  position: absolute;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  color: #2c3e50;
+  font-family: 'B Nazanin', Tahoma;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  #line_detail { width: 95%; }
+  #line_detail thead th { padding: 12px 15px; font-size: 13px; }
+  #line_detail tbody td { padding: 10px 15px; font-size: 13px; }
+  #timerr { top: 10px; left: 10px; padding: 10px; }
+  .base-timer { width: 60px; height: 60px; }
+  .base-timer__label { font-size: 16px; }
+  .base-timer__path-elapsed,
+  .base-timer__path-remaining { stroke-width: 5px; }
+  .base-timer__path-remaining.orange { color: #FFC000; }
+  .base-timer__path-remaining.red { color: #fd7474; }
+}

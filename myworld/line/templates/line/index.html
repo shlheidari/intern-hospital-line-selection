@@ -1,0 +1,68 @@
+{% extends "line/base.html" %}
+{% load static %}
+{% block title %}انتخاب لاین ورودی ۹۸{% endblock %}
+
+{% block styles %}
+  <link rel="stylesheet" href="{% static 'line/css/index.css' %}">
+{% endblock %}
+
+{% block content %}
+<br><br>
+{% if messages %}
+<div class="alert alert-warning" role="alert">
+  {% for message in messages %}
+    {{ message }}
+  {% endfor %}
+</div>
+{% endif %}
+
+<br><br>
+<div class="center">
+  <div>
+    <a href="{% url 'member' %}"><button class="btn btn-primary btn-lg">لیست سوابق</button></a>
+  </div>
+  <br>
+  <div>
+    <a href="{% url 'capacity' %}"><button class="btn btn-info btn-lg">لیست ظرفیت ها</button></a>
+  </div>
+  <br>
+  <div>
+    <button type="button" data-open-modal="logi" class="btn btn-success btn-lg">انتخاب لاین</button>
+  </div>
+  <br>
+  <div>
+    <button type="button" data-open-modal="chan" class="btn btn-warning btn-lg">تغییر رمز عبور</button>
+  </div>
+  <br>
+</div>
+
+<div class="modal-overlay" id="logi">
+  <div class="modal-content">
+    <button type="button" class="modal-close" data-close-modal>&times;</button>
+    <form class="login-form" action="select/" method="POST">
+      {% csrf_token %}
+      <button type="button" class="btn-close" aria-label="Close" data-close-modal></button>
+      <input type="text" name="username" placeholder="نام کاربری" autocomplete="username"/>
+      <input type="password" name="password" placeholder="کلمه عبور" autocomplete="current-password"/>
+      <button type="submit" class="lbutton">ورود به بخش انتخاب لاین</button>
+    </form>
+  </div>
+</div>
+
+<div class="modal-overlay" id="chan">
+  <div class="modal-content">
+    <button type="button" class="modal-close" data-close-modal>&times;</button>
+    <form class="login-form" action="pas/" method="POST">
+      {% csrf_token %}
+      <button type="button" class="btn-close" aria-label="Close" data-close-modal></button>
+      <input type="text" name="username" placeholder="نام کاربری" autocomplete="username"/>
+      <input type="password" name="password" placeholder="کلمه عبور" autocomplete="current-password"/>
+      <button type="submit" class="cbutton">تغییر رمز عبور</button>
+    </form>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+  <script src="{% static 'line/js/index.js' %}"></script>
+{% endblock %}

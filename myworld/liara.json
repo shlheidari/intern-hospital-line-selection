@@ -1,0 +1,17 @@
+{
+  "port": 80,
+  "platform": "django",
+  "app": "your-liara-app-name",
+  "build": {
+    "location": "iran"
+  },
+  "django": {
+    "pythonVersion": "3.11"
+  },
+  "disks": [
+    {
+      "name": "data",
+      "mountTo": "data"
+    }
+  ]
+}

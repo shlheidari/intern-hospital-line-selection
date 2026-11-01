@@ -1,0 +1,286 @@
+body {
+  display: grid;
+  grid-template-columns: auto 0px; 
+}
+.top {
+  --offset: 50px; 
+  position: sticky;
+  bottom: 20px;      
+  margin-right: 10px; 
+  place-self: end;
+  margin-top: calc(100vh + var(--offset));
+  /* visual styling */
+  width: 45px;
+  aspect-ratio: 1;
+  background: #ff8b24;
+  border-radius: 10px;
+}
+.top:before {
+  content: "";
+  position: absolute;
+  inset: 30%;
+  transform: translateY(20%) rotate(-45deg);
+  border-top: 5px solid #fff;
+  border-right: 5px solid #fff;
+}
+p {
+  font-size: 25px;
+}
+.logged-check {
+    color: #45818E; /* Primary color */
+    font-size: 1.2em;
+    font-weight: bold;
+    text-shadow: 0 1px 1px rgba(69, 129, 142, 0.2);
+}
+.logged-cross {
+    color: #fd7474; /* Accent color from scroll button */
+    font-size: 1.2em;
+    font-weight: bold;
+    text-shadow: 0 1px 1px rgba(255, 139, 36, 0.2);
+}
+  /* استایل اصلی دکمه */
+  .home-return-btn {
+      background-color: #45818E;
+      color: white !important;
+      border: 2px solid #366f7a;
+      border-radius: 25px;
+      padding: 12px 30px;
+      font-family: 'B Nazanin';
+      font-size: 16px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      position: relative;
+      overflow: hidden;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+  }
+  /* افکت هنگام هاور */
+  .home-return-btn:hover {
+      background-color: #366f7a;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+      border-color: #2c5d66;
+  }
+  /* افکت هنگام کلیک */
+  .home-return-btn:active {
+      transform: translateY(0);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  /* آیکون پیکان */
+  .home-return-btn .arrow-icon {
+      font-size: 18px;
+      transition: transform 0.3s ease;
+  }
+  /* انیمیشن آیکون */
+  .home-return-btn:hover .arrow-icon {
+      transform: translateX(-5px);
+  }
+  /* نسخه موبایل */
+  @media (max-width: 768px) {
+      .home-return-btn {
+          padding: 10px 20px;
+          font-size: 14px;
+          width: 100%;
+          justify-content: center;
+      }
+  }
+  
+    /* Base Styles */
+    body {
+        font-family: 'B Nazanin', Tahoma, sans-serif;
+        background-color: #f5f7fa;
+        direction: rtl;
+        color: #2c3e50;
+    }
+    /* Table Container */
+    .table-container {
+        margin: 20px auto;
+        overflow-x: auto;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+        border-radius: 8px;
+        background: white;
+    }
+    /* Table Styles */
+    table {
+        width: 100%;
+        min-width: 1200px;
+        border-collapse: collapse;
+    }
+    th {
+        background-color: #45818E !important;
+        color: white !important;
+        font-weight: bold;
+        position: sticky;
+        top: 0;
+        white-space: nowrap;
+        padding: 15px 12px !important;
+    }
+    td {
+        padding: 12px !important;
+        vertical-align: middle !important;
+        border-bottom: 1px solid #eee !important;
+    }
+    tr:hover td {
+        background-color: #f8f9fa;
+    }
+    /* Scroll to Top Button */
+    .top {
+        background: #45818E !important;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        transition: all 0.3s ease;
+    }
+    .top:hover {
+        transform: translateY(-3px);
+        background: #366f7a !important;
+    }
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .table-container {
+            margin: 10px;
+            border-radius: 0;
+        }
+        th {
+            font-size: 14px;
+            padding: 12px 8px !important;
+        }
+        td {
+            font-size: 13px;
+            padding: 10px 8px !important;
+        }
+        .home-return-btn {
+            width: 100%;
+            margin-bottom: 15px;
+        }
+    }
+    /* Zebra Striping */
+    tr:nth-child(even) {
+        background-color: #f8f9fa;
+    }
+    /* Column Highlights */
+    td:first-child,
+    th:first-child {
+        background-color: #e9f2f4;
+        font-weight: bold;
+    }
+    /* Hover Effects */
+    tr {
+        transition: all 0.2s ease;
+    }
+    tr:hover {
+        transform: translateX(5px);
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+    
+      /* Add sorting styles */
+      th.sortable {
+          cursor: pointer;
+          position: relative;
+          padding-right: 25px !important;
+      }
+      th.sortable::after {
+          content: "";
+          position: absolute;
+          right: 8px;
+          top: 50%;
+          transform: translateY(-50%);
+          border-width: 0 4px 4px;
+          border-style: solid;
+          border-color: #fff transparent;
+          visibility: hidden;
+      }
+      th.sortable.asc::after {
+          visibility: visible;
+          transform: translateY(-30%) rotate(180deg);
+      }
+      th.sortable.desc::after {
+          visibility: visible;
+          transform: translateY(-70%) rotate(0deg);
+      }
+      th.sortable:hover::after {
+          visibility: visible;
+          opacity: 0.7;
+      }
+      .search-container {
+        direction: rtl;
+        padding: 0 15px;
+    }
+    #searchInput:focus {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(69, 129, 142, 0.3);
+        border-color: #366f7a;
+    }
+    @media (max-width: 768px) {
+      #searchInput {
+          width: 100%;
+          margin: 0 10px 15px;
+      }
+  }
+      
+        /* Add these styles to your existing CSS */
+        .table-container {
+            max-height: 70vh;
+            overflow-y: auto;
+            margin: 20px 0;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+        table {
+            position: relative;
+            border-collapse: collapse;
+        }
+        thead {
+            position: sticky;
+            top: 0;
+            z-index: 2;
+        }
+        th {
+            background-color: #45818E !important;
+            color: white !important;
+            padding: 15px 12px !important;
+            box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.1);
+        }
+        /* For RTL scrolling */
+        .table-container::-webkit-scrollbar {
+            width: 8px;
+        }
+        .table-container::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 4px;
+        }
+        .table-container::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 4px;
+        }
+        .table-container::-webkit-scrollbar-thumb:hover {
+            background: #666;
+        }
+        
+table.dataTable thead .sorting:after,
+table.dataTable thead .sorting:before,
+table.dataTable thead .sorting_asc:after,
+table.dataTable thead .sorting_asc:before,
+table.dataTable thead .sorting_asc_disabled:after,
+table.dataTable thead .sorting_asc_disabled:before,
+table.dataTable thead .sorting_desc:after,
+table.dataTable thead .sorting_desc:before,
+table.dataTable thead .sorting_desc_disabled:after,
+table.dataTable thead .sorting_desc_disabled:before {
+  bottom: .5em;
+}
+
+/* search box (was an inline style) */
+.search-container { margin: 20px 0; text-align: left; }
+#searchInput {
+  width: 300px;
+  max-width: 100%;
+  margin-bottom: 15px;
+  padding: 12px 20px;
+  border: 2px solid #45818E;
+  border-radius: 25px;
+  font-family: 'B Nazanin';
+  font-size: 16px;
+}
+
+/* The table used to follow an empty duplicate <table>, which left a 20px gap. */
+#dtBasicExample { margin-top: 20px; }

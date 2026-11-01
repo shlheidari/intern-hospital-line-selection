@@ -1,0 +1,83 @@
+{% extends "line/base.html" %}
+{% load static %}
+{% block title %}لیست سوابق{% endblock %}
+{% block head %}<meta name="viewport" content="width=device-width, initial-scale=1">{% endblock %}
+
+{% block styles %}
+  <link rel="stylesheet" href="{% static 'line/css/members.css' %}">
+{% endblock %}
+
+{% block content %}
+<div>
+  <a href="{% url 'index' %}" class="home-return-btn">
+    <span class="glyphicon glyphicon-arrow-left arrow-icon"></span>
+    برگشت به صفحه اول
+  </a>
+  <br>
+  <div class="search-container">
+    <input type="text" id="searchInput" class="form-control" placeholder="جستجو...">
+  </div>
+  <br>
+  <table id="dtBasicExample" class="table table-striped table-bordered table-sm dataTable" cellspacing="0" width="100%" role="grid">
+    <thead>
+    <tr>
+      <th class="th-sm sortable">نوبت</th>
+      <th class="th-sm sortable">نام و نام خانوادگی</th>
+      <th class="th-sm sortable">ورود قبلی</th>
+      <th class="th-sm sortable">زمان شروع</th>
+      <th class="th-sm sortable">زمان پایان</th>
+      <th class="th-sm sortable">لاین</th>
+      <th class="th-sm sortable">داخلی</th>
+      <th class="th-sm sortable">اطفال</th>
+      <th class="th-sm sortable">جراحی</th>
+      <th class="th-sm sortable">اورژانس</th>
+      <th class="th-sm sortable">زنان</th>
+      <th class="th-sm sortable">ارتوپدی</th>
+      <th class="th-sm sortable">قلب</th>
+      <th class="th-sm sortable">الکتیو اول</th>
+      <th class="th-sm sortable">الکتیو دوم</th>
+      <th class="th-sm sortable">الکتیو سوم</th>
+  </tr>
+  </thead>
+    <tbody>
+{% for x in members %}
+<tr>
+<td>{{ x.num }}</td>
+<td>{{ x.name }}</td>
+<td class="text-center">
+    {% if x.logged %}
+        <span class="logged-check">✔</span>
+    {% else %}
+        <span class="logged-cross">✘</span>
+    {% endif %}
+</td>
+<td>{{ x.start_time }}</td>
+<td>{{ x.end_time }}</td>
+<td>{{ x.line|default:"" }}</td>
+<td>{{ x.internal|default:"" }}</td>
+<td>{{ x.pediatrics|default:"" }}</td>
+<td>{{ x.surgery|default:"" }}</td>
+<td>{{ x.emergency|default:"" }}</td>
+<td>{{ x.gynocology|default:"" }}</td>
+<td>{{ x.orthopedix|default:"" }}</td>
+<td>{{ x.cardiology|default:"" }}</td>
+<td>{{ x.elective_one|default:"" }}</td>
+<td>{{ x.elective_two|default:"" }}</td>
+<td>{{ x.elective_three|default:"" }}</td>
+</tr>
+{% endfor %}
+</tbody>
+  </table>
+  <br><br>
+  <a href="{% url 'index' %}" class="home-return-btn">
+    <span class="glyphicon glyphicon-arrow-left arrow-icon"></span>
+    برگشت به صفحه اول
+  </a>
+  <br><br>
+</div>
+<a href="#" class="top" aria-label="بازگشت به بالا"></a>
+{% endblock %}
+
+{% block scripts %}
+  <script src="{% static 'line/js/members.js' %}"></script>
+{% endblock %}

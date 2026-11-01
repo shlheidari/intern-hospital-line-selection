@@ -1,0 +1,15 @@
+{% load static %}<!DOCTYPE html>
+<html lang="fa"{% block html_attrs %}{% endblock %}>
+<head>
+  <meta charset="utf-8">
+  {% block head %}{% endblock %}
+  <title>{% block title %}{% endblock %}</title>
+  <link rel="icon" type="image/x-icon" href="{% static 'line/favicon.ico' %}">
+  <link rel="stylesheet" href="{% static 'line/vendor/bootstrap/css/bootstrap.min.css' %}">
+  {% block styles %}{% endblock %}
+</head>
+<body>
+{% block content %}{% endblock %}
+{% block scripts %}{% endblock %}
+</body>
+</html>

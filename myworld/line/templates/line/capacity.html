@@ -1,0 +1,28 @@
+{% extends "line/base.html" %}
+{% load static %}
+{% block title %}لیست ظرفیت{% endblock %}
+
+{% block styles %}
+  <link rel="stylesheet" href="{% static 'line/css/schedule.css' %}">
+  <link rel="stylesheet" href="{% static 'line/css/capacity.css' %}">
+{% endblock %}
+
+{% block content %}
+<a href="{% url 'index' %}" class="home-return-btn">
+  <span class="glyphicon glyphicon-arrow-left arrow-icon"></span>
+  برگشت به صفحه اول
+</a>
+<br><br>
+<div id="capacity-app"></div>
+<br><br>
+<a href="{% url 'index' %}" class="home-return-btn">
+  <span class="glyphicon glyphicon-arrow-left arrow-icon"></span>
+  برگشت به صفحه اول
+</a>
+<br><br>
+{{ config|json_script:"page-config" }}
+{% endblock %}
+
+{% block scripts %}
+  <script src="{% static 'line/js/capacity.js' %}"></script>
+{% endblock %}

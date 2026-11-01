@@ -1,0 +1,9 @@
+/* Schedule board shared by the selection and capacity pages.
+   The per-cell styles (td.styleN) come from the spreadsheet export and live
+   in each page's stylesheet. (The export also set a font on <html>; Bootstrap's
+   always won, so it is not repeated here.) */
+html { background-color: white; }
+.gridlines td { border: 1px dotted black; }
+.b, .e { text-align: center; }
+.f, .n { text-align: right; }
+.inlineStr, .s { text-align: left; }

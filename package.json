@@ -1,0 +1,24 @@
+{
+  "name": "intern-hospital-line-selection-frontend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Front end of the line-selection app: React pages bundled into Django static files.",
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "build": "node frontend/build.mjs",
+    "vendor": "node frontend/vendor.mjs",
+    "test": "node --test \"frontend/tests/*.test.js\"",
+    "e2e": "playwright test --config e2e/playwright.config.js"
+  },
+  "dependencies": {
+    "axios": "1.7.9",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "bootstrap": "3.4.1",
+    "esbuild": "0.24.2"
+  }
+}

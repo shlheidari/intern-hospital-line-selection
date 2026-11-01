@@ -1,0 +1,181 @@
+    /* Base Styles */
+    body {
+        font-family: 'B Nazanin', Tahoma, sans-serif;
+        background: #f8f9fa;
+        direction: rtl;
+        margin: 0;
+        padding: 20px;
+    }
+    /* Alerts */
+    .alert {
+        max-width: 800px;
+        margin: 20px auto;
+        border-radius: 8px;
+        border: 2px solid #45818E;
+        background: #e9f2f4;
+        color: #2c3e50;
+        padding: 15px 25px;
+    }
+    /* Main Container */
+    .center {
+        max-width: 400px;
+        margin: 40px auto;
+        padding: 30px;
+        background: #f5f5f5;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        display: flex; /* Add flexbox */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    }
+    /* Buttons */
+    .btn {
+        width: 250px;
+        max-width: 500px;
+        margin: 12px 0;
+        padding: 14px 28px;
+        border-radius: 8px;
+        font-size: 16px;
+        transition: all 0.3s ease;
+        border: 2px solid transparent;
+    }
+    .btn-primary {
+        background: #45818E;
+        color: white;
+    }
+    .btn-primary:hover {
+        background: #366f7a;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(69, 129, 142, 0.2);
+    }
+    .btn-info {
+        background: #B6D7A8;
+        color: white;
+    }
+    .btn-info:hover {
+        background: #9DC893;
+    }
+    .btn-success {
+        background: #6FA8DC;
+        color: white;
+    }
+    .btn-success:hover {
+        background: #5D93C4;
+    }
+    .btn-warning {
+        background: #fd7474;
+        color: white;
+    }
+    .btn-warning:hover {
+        background: #f54343;
+    }
+    /* Login Forms */
+    .login-page {
+        max-width: 400px;
+        width: 360px;
+        padding: 2% 0 0; /* Reduced from 8% */
+        margin: -40px auto 100px; /* Added negative top margin */
+    }
+    .form {
+        background: white;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        border: 2px solid #45818E;
+        position: relative;
+        top: -30px; /* Pull form up */
+    }
+    .form input {
+        width: 100%;
+        padding: 12px 18px;
+        margin: 10px 0;
+        border: 2px solid #ddd;
+        border-radius: 8px;
+        font-size: 16px;
+        transition: border-color 0.3s ease;
+    }
+    .form input:focus {
+        border-color: #45818E;
+        outline: none;
+    }
+    .lbutton, .cbutton {
+        background: #45818E;
+        color: white;
+        padding: 14px;
+        border-radius: 8px;
+        border: none;
+        font-size: 16px;
+        margin-top: 15px;
+        transition: background 0.3s ease;
+    }
+    .cbutton {
+        background: #DD7E6B;
+    }
+    .lbutton:hover { background: #366f7a; }
+    .cbutton:hover { background: #CB6D5B; }
+    /* Close Button */
+    .btn-close {
+        float: left;
+        font-size: 24px;
+        color: #666;
+        background: none;
+        border: none;
+        padding: 0 8px;
+    }
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .center {
+            width: 90%;
+            padding: 20px;
+        }
+        .btn {
+            font-size: 14px;
+            padding: 12px 20px;
+        }
+        .form {
+            padding: 20px;
+        }
+    }
+/* Modal Overlay */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 1000;
+}
+/* Modal Content */
+.modal-content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    width: 90%;
+    max-width: 400px;
+    z-index: 1001;
+}
+/* Close Button */
+.modal-close {
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    font-size: 24px;
+    color: #666;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+}
+.modal-close:hover {
+    color: #45818E;
+}
+    
+
+.modal-overlay.is-open { display: block; }

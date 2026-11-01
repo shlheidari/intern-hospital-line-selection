@@ -1,0 +1,26 @@
+{% extends "line/base.html" %}
+{% load static %}
+{% block title %}Real-Time Data{% endblock %}
+{% block head %}<meta name="viewport" content="width=device-width, initial-scale=1.0">{% endblock %}
+
+{% block styles %}
+  <link rel="stylesheet" href="{% static 'line/css/realtime.css' %}">
+{% endblock %}
+
+{% block content %}
+<h1>Members</h1>
+<table id="members-table">
+  <tbody></tbody>
+</table>
+
+<h1>Selection in progress</h1>
+<table id="selection-table">
+  <tbody></tbody>
+</table>
+<p class="hint">Click a cell to edit it. The tables refresh every few seconds.</p>
+{{ config|json_script:"page-config" }}
+{% endblock %}
+
+{% block scripts %}
+  <script src="{% static 'line/js/realtime.js' %}"></script>
+{% endblock %}

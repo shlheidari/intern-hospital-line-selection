@@ -1,0 +1,35 @@
+{% extends "line/base.html" %}
+{% load static %}
+{% block title %}انتخاب لاین{% endblock %}
+
+{% block styles %}
+  <link rel="stylesheet" href="{% static 'line/css/schedule.css' %}">
+  <link rel="stylesheet" href="{% static 'line/css/select.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="container">
+  <div class="selection-card">
+    <h3>اطلاعات دانشجو</h3>
+    <table class="table table-bordered">
+      <tbody>
+        <tr>
+          <th>شماره دانشجویی</th>
+          <td>{{ user }}</td>
+        </tr>
+        <tr>
+          <th>نام و نام خانوادگی</th>
+          <td>{{ me.name }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <br><br>
+  <div id="select-app"></div>
+</div>
+{{ config|json_script:"page-config" }}
+{% endblock %}
+
+{% block scripts %}
+  <script src="{% static 'line/js/select.js' %}"></script>
+{% endblock %}

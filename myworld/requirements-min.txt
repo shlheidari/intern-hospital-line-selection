@@ -1,0 +1,11 @@
+# Minimal, installable set of the packages the app actually imports.
+# (requirements.txt is a full `pip freeze` of the original development machine
+#  and does not install cleanly on a fresh system.)
+Django==4.2.2
+django-environ==0.12.0
+django-user-sessions==2.0.0
+django-preventconcurrentlogins==0.8.2
+openpyxl==3.1.2
+psycopg2-binary==2.9.9   # only needed when using PostgreSQL
+setuptools<81            # django-user-sessions still imports pkg_resources
+whitenoise==6.8.2
